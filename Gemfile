@@ -14,6 +14,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'haml'
+gem "omniauth-google-oauth2", "~> 0.2.1"
 
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
