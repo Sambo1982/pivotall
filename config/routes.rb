@@ -5,6 +5,7 @@ get 'auth/failure', to: redirect('/')
 get 'signout', to: 'sessions#destroy', as: 'signout'
 
 resources :sessions, only: [:create, :destroy]
+resources :pivotal_accounts
 
 root 'static_pages#home'
 
