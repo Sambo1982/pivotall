@@ -15,6 +15,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'haml'
 gem "omniauth-google-oauth2", "~> 0.2.1"
+gem 'factory_girl'
 
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
