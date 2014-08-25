@@ -1,0 +1,21 @@
+<h1>Linked Pivotal Acocunts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>API Key</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>	
+
+	<% @pivotal_accounts.each do |p| %>
+	  <tr>
+	    <td><%= p.api_key %></td>
+	    <td><%= link_to 'Destroy', p, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	  </tr>
+	<% end %>
+
+  </tbody>
+</table>
