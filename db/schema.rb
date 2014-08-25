@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140825223510) do
+ActiveRecord::Schema.define(version: 20140825224828) do
 
   create_table "pivotal_accounts", force: true do |t|
     t.string   "user_id"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20140825223510) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "subscribe"
   end
 
   create_table "users", force: true do |t|
