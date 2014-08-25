@@ -1,5 +1,4 @@
 <h1>Linked Pivotal Acocunts</h1>
-
 <table>
   <thead>
     <tr>
@@ -13,9 +12,30 @@
 	<% @pivotal_accounts.each do |p| %>
 	  <tr>
 	    <td><%= p.api_key %></td>
-	    <td><%= link_to 'Destroy', p, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	    <td><%= link_to 'Destroy', p, method: :delete %></td>
 	  </tr>
 	<% end %>
+
+  </tbody>
+</table>
+
+<h1>Projects</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Project ID</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody> 
+
+  <% @projects.each do |p| %>
+    <tr>
+      <td><%= p.id %></td>
+      <td><%= p.name %></td>
+    </tr>
+  <% end %>
 
   </tbody>
 </table>

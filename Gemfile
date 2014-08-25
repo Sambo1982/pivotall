@@ -16,6 +16,8 @@ gem 'turbolinks'
 gem 'haml'
 gem "omniauth-google-oauth2", "~> 0.2.1"
 gem 'factory_girl'
+gem 'pivotal-tracker'
+gem 'httparty'
 
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

@@ -4,6 +4,7 @@ class PivotalAccountsController < ApplicationController
 	def index
 		@user = current_user
 		@pivotal_accounts = @user.pivotal_accounts.all
+		@projects = PivotalTracker::Project.all
 	end
 	
 	def new
@@ -15,6 +16,7 @@ class PivotalAccountsController < ApplicationController
 		@pivotal_account = @user.pivotal_accounts.build(pivotal_params)
 		respond_to do |format|
 		  if @pivotal_account.save
+		  	set_token
 		    format.html { redirect_to pivotal_accounts_path, notice: 'Pivotal Tracker account was successfully created.' }
 		    format.json { render action: 'show', status: :created, location: @pivotal_account }
 		  else
@@ -42,5 +44,7 @@ private
     def pivotal_params
       params.require(:pivotal_account).permit(:user_id, :api_key)
     end
+
+
 
 end

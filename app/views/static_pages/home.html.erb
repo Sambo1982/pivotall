@@ -6,7 +6,8 @@
 
 	<% if current_user %>
 		Logged in as <strong><%= current_user.name %></strong>!
-		<%= link_to "Sign out", signout_path, id: "sign_out" %>
+		<%= link_to "Sign out", signout_path, id: "sign_out" %><br><br>
+		<%= link_to "Add Pivotal Account", new_pivotal_account_path, class: "btn btn-block btn-primary" %>
 		<% else %>
 			<h1>Log-in</h1><br>
 			<%= link_to "/auth/google_oauth2", id: "sign_in", class: "btn btn-block btn-social btn-google-plus" do %>
