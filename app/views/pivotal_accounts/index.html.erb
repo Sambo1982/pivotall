@@ -8,7 +8,6 @@
   </thead>
 
   <tbody>	
-
 	<% @pivotal_accounts.each do |p| %>
 	  <tr>
 	    <td><%= p.api_key %></td>
@@ -20,22 +19,29 @@
 </table>
 
 <h1>Projects</h1>
+
 <table>
   <thead>
     <tr>
-      <th>Project ID</th>
-      <th></th>
+      <th>Pivotal ID</th>
+      <th>Project Name</th>
+      <th>Subscribe Project</th>
     </tr>
   </thead>
 
   <tbody> 
 
-  <% @projects.each do |p| %>
-    <tr>
-      <td><%= p.id %></td>
-      <td><%= p.name %></td>
-    </tr>
-  <% end %>
+    <% @projects.each do |p| %>
+      <tr>
+        <td><%= p.external_id %></td>
+        <td><%= p.name %></td>
+        <td>
+          <%= check_box_tag 'subscribe', p.id , p.subscribe, :class => "subscribe-check" %>
+        </td>
+      </tr>
+    <% end %>
+
 
   </tbody>
 </table>
+
