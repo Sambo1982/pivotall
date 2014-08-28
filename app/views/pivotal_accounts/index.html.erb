@@ -20,12 +20,13 @@
 
 <h1>Projects</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Pivotal ID</th>
       <th>Project Name</th>
-      <th>Subscribe Project</th>
+      <th>Synced</th>
+      <th></th>
     </tr>
   </thead>
 
@@ -36,7 +37,19 @@
         <td><%= p.external_id %></td>
         <td><%= p.name %></td>
         <td>
-          <%= check_box_tag 'subscribe', p.id , p.subscribe, :class => "subscribe-check" %>
+          <% if p.subscribe==true %>
+            <i class="green fa fa-thumbs-up"></i>
+            <% else %> 
+              <i class="red fa fa-thumbs-down"></i> 
+          <% end %>
+        </td>
+        <td>
+          <% if p.subscribe==true %>
+             <%= link_to 'Unsync', edit_project_path(p) %>
+            <% else %> 
+               <%= link_to 'Sync', edit_project_path(p) %>
+          <% end %>
+
         </td>
       </tr>
     <% end %>

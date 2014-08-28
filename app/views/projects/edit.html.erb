@@ -1,0 +1,14 @@
+<%= form_for(@project) do |f| %>
+  
+  <div class="checkbox">
+    <label>
+      <%= f.check_box :subscribe %> 
+      Synced
+    </label>
+  </div>
+
+  <div class="actions">
+    <%= f.submit :class => "btn btn-default" %>
+  </div>
+
+<% end %>

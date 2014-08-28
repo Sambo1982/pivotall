@@ -1,2 +1,13 @@
-@import "twitter/bootstrap";
-@import "font-awesome";
+@import 'twitter/bootstrap';
+@import 'font-awesome';
+@import 'base/colors';
+@import 'base/typography';
+
+
+i.green {
+	color: $green;
+}
+
+i.red {
+	color: $red;
+}
