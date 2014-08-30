@@ -1,0 +1,22 @@
+<h1>Stories</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>External ID</th>
+      <th>Name</th>
+
+    </tr>
+  </thead>
+
+  <tbody> 
+
+    <% @stories.each do |s| %>
+      <tr>
+        <td><%= s.external_id %></td>
+        <td><%= s.name %></td>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>

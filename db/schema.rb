@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140825225437) do
+ActiveRecord::Schema.define(version: 20140828231040) do
 
   create_table "pivotal_accounts", force: true do |t|
     t.string   "user_id"
@@ -27,6 +27,22 @@ ActiveRecord::Schema.define(version: 20140825225437) do
     t.datetime "updated_at"
     t.boolean  "subscribe"
     t.string   "pivotal_account_id"
+  end
+
+  create_table "stories", force: true do |t|
+    t.string   "project_id"
+    t.string   "external_id"
+    t.string   "external_project_id"
+    t.string   "name"
+    t.string   "description"
+    t.string   "story_type"
+    t.string   "current_state"
+    t.float    "estimate"
+    t.datetime "accepted_at"
+    t.datetime "deadline"
+    t.string   "requested_by_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|

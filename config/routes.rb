@@ -7,7 +7,7 @@ get 'signout', to: 'sessions#destroy', as: 'signout'
 
 resources :sessions, only: [:create, :destroy]
 resources :pivotal_accounts
-
+resources :stories
 resources :projects 
 
 

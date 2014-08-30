@@ -57,6 +57,17 @@ private
 		end
     end
 
+    def create_stories
+    	project = Project.where(:subscribe=>true)
+    	project.each do |project|
+    		a_project = PivotalTracker::Project.find(project)                        
+			stories = a_project.stories.all  
+			stories.each do |story|
+				story = project.stories.create(:name => story.name, :external_id => story.id)
+			end
+		end
+    end
+
 
 
 end
